@@ -5,7 +5,10 @@
             [reagent.ratom :refer [atom]]
             [chord.client :refer [ws-ch]]
             [cljs.core.async :refer [chan <! >! put! close!]]
-            [re-frame.core :refer [register-handler register-sub dispatch subscribe]]))
+            [re-frame.core :refer [register-handler register-sub dispatch subscribe]]
+            [goog.style :refer [installStyles]]
+            [garden.core :refer [css]]
+            [garden.stylesheet :refer [at-media]]))
 
 (register-handler
   :initialize
@@ -114,8 +117,20 @@
    [input-panel]
    [message-panel]])
 
+(defn install-styles []
+  (installStyles (css (at-media {:screen true}
+                                [:body {:padding 0
+                                        :margin 0
+                                        :font-size "10pt"}]
+                                [:.messages {:padding 0
+                                             :margin 0
+                                             :list-style 'none}]
+                                [:.datetime {:font-size "80%"
+                                             :display 'block}]))))
+
 (defn render-panel [panel]
-  (render panel (.getElementById js/document "app")))
+  (render panel (.getElementById js/document "app"))
+  (install-styles))
 
 (defn mount-root []
   (go

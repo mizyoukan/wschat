@@ -7,6 +7,7 @@ This project uses:
 - [http-kit](http://www.http-kit.org/) for WebSocket Server
 - [Chord](https://github.com/jarohen/chord) for WebSocket Client
 - [re-frame](https://github.com/Day8/re-frame) for Reagent Framework
+- [Garden](https://github.com/noprompt/garden) for Generating CSS
 - [Compojure](https://github.com/weavejester/compojure) for Server Routing
 
 ## Development Mode

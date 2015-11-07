@@ -10,7 +10,8 @@
                  [org.clojure/clojurescript "1.7.145"]
                  [reagent "0.5.1"]
                  [re-frame "0.5.0"]
-                 [jarohen/chord "0.6.0"]]
+                 [jarohen/chord "0.6.0"]
+                 [garden "1.3.0-SNAPSHOT"]]
 
   :source-paths ["src/clj"]
 
