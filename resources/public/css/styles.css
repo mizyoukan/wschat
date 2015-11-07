@@ -1,0 +1,20 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 10pt;
+}
+
+.messages {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.datetime {
+  font-size: 80%;
+  display: block;
+}
+
+.message {
+  font-size: 100%;
+}
